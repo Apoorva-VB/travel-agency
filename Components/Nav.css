@@ -1,0 +1,85 @@
+/* Navbar.css - Dark Theme */
+
+/* Dark navbar container */
+.navbar-dark {
+  background-color: #1a1a1a; /* Dark gray */
+  padding: 1rem 0;
+  border-bottom: 1px solid #333; /* Subtle border */
+}
+
+/* Inner container */
+.navbar-dark__container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Base link style */
+.navbar-dark__link {
+  color: #e0e0e0; /* Light gray */
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.75rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.navbar-dark__link:hover {
+  color: #ffffff; /* Pure white */
+}
+
+/* Active link */
+.navbar-dark__link--active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Glowing underline animation */
+.navbar-dark__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff9800); /* Purple gradient */
+  transition: width 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-dark__link:hover::after {
+  width: 100%;
+  box-shadow: 0 0 10px #ff9800(107, 70, 193, 0.5); /* Glow effect */
+}
+
+/* Active link underline */
+.navbar-dark__link--active::after {
+  width: 100%;
+  background: #ff9800; /* Solid purple */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar-dark__container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .navbar-dark__link {
+    padding: 0.5rem 1rem;
+    border-left: 3px solid transparent;
+  }
+
+  .navbar-dark__link--active {
+    border-left: 3px solid #ff9800; /* Purple accent */
+  }
+
+  .navbar-dark__link::after {
+    display: none; /* Hide underline on mobile */
+  }
+}

@@ -1,0 +1,68 @@
+.popular-section {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.destination-card {
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.destination-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* fixes image being cut awkwardly */
+  display: block;
+}
+
+.destination-card h4 {
+  margin: 1rem 1rem 0.5rem;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.destination-card p {
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+  color: #ccc;
+  text-align: left;
+}
+
+/* Optional: Improve spacing on very small screens */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .destination-card h4 {
+    font-size: 1rem;
+  }
+
+  .destination-card p {
+    font-size: 0.9rem;
+  }
+}

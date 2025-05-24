@@ -1,0 +1,56 @@
+.choose-container {
+  background-color: #111;
+  color: #f0f0f0;
+  padding: 1em 1em;
+  text-align: center;
+}
+
+.choose-title {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.feature-card {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 1.5em;
+  max-width: 250px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.feature-card h4 {
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+
+.feature-card p {
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
